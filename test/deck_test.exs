@@ -20,6 +20,7 @@ defmodule DeckTest do
 
   test "can take a card from the deck", ctx do
     assert is_a_card(Deck.draw(ctx[:deck]))
+    assert Deck.count(ctx[:deck]) == 51
   end
 
   test "drawing 52 cards refreshes the deck", ctx do
